@@ -1,0 +1,182 @@
+FORMAT: 1A
+HOST: http://aconex.apiblueprint.org/
+
+# Aconex
+
+Aconex APIs let you easily integrate Aconex with other applications.
+
+## Projects Collection [/projects]
+
+### List All Projects [GET]
+
+Returns all projects
+
++ Request
+
+    + Headers
+    
+            Accept: application/json (string) - advertises which content types the client is able to understand.
+
++ Response 200 (application/json)
+
+    + Headers
+    
+            Cache-Control: no-cache
+            Date: Fri, 09 Jun 2017 20:17:34 GMT
+            Expires: Wed, 31 Dec 1969 19:00:00 EST
+            Pragma: No-cache
+            Proxy-Connection: Keep-Alive
+            Server: Apache-Coyote/1.1
+            Transfer-Encoding: chunked
+            Via: 1.1 10.44.105.5 (McAfee Web Gateway 7.6.2.10.0.23236)
+            
+    + Body
+
+            {
+              "searchResults": [
+                {
+                  "projectID": 1207962572,
+                  "ownerOrganizationID": 1207969874,
+                  "projectShortName": "EIS-INFRA-SB",
+                  "projectName": "EIS Infrastructure Sandbox",
+                  "deliveryAddressLine": "12011 Sunset Hills Road",
+                  "deliveryCity": "Reston",
+                  "deliveryState": "Virginia",
+                  "deliveryCountry": "United States",
+                  "deliveryPostcode": "20190",
+                  "postalAddressLine": "12011 Sunset Hills Road",
+                  "postalCity": "Reston",
+                  "postalState": "Virginia",
+                  "postalCountry": "United States",
+                  "postalPostcode": "20190",
+                  "projectAddressLine": "12011 Sunset Hills Road",
+                  "projectCity": "Reston",
+                  "projectState": "Virginia",
+                  "projectCountry": "United States",
+                  "projectPostcode": "20190",
+                  "phoneNumber": "15713926300",
+                  "faxNumber": "1",
+                  "responsibilities": [],
+                  "logoPath": null,
+                  "startDate": "2017-03-01T05:00:00.000Z",
+                  "stopDate": "2018-03-01T05:00:00.000Z",
+                  "creationDate": "2017-03-01T17:04:28.870Z",
+                  "projectValue": "0.00",
+                  "projectType": "Combined Cycle",
+                  "projectDescription": "Create a sandbox for testing using the Infrastructure Template.  Custodian Rob DeCarlo Bechtel.",
+                  "disconnectionStatus": "NONE",
+                  "hidden": false,
+                  "active": true,
+                  "mdmRequired": null,
+                  "grantedMobileAppAccess": null
+                },
+                {
+                  "projectID": 1207962568,
+                  "ownerOrganizationID": 1207969874,
+                  "projectShortName": "EIS-OGC-SB",
+                  "projectName": "EIS OG&C Sandbox",
+                  "deliveryAddressLine": "3000 Post Oak Boulevard",
+                  "deliveryCity": "Houston",
+                  "deliveryState": "Texas",
+                  "deliveryCountry": "Australia",
+                  "deliveryPostcode": "77056",
+                  "postalAddressLine": "3000 Post Oak Boulevard",
+                  "postalCity": "Houston",
+                  "postalState": "Texas",
+                  "postalCountry": "Australia",
+                  "postalPostcode": "77056",
+                  "projectAddressLine": "3000 Post Oak Boulevard",
+                  "projectCity": "Houston",
+                  "projectState": "Texas",
+                  "projectCountry": "United States",
+                  "projectPostcode": "77056",
+                  "phoneNumber": "15713926300",
+                  "faxNumber": "1",
+                  "responsibilities": [],
+                  "logoPath": null,
+                  "startDate": "2017-03-01T05:00:00.000Z",
+                  "stopDate": "2018-03-01T05:00:00.000Z",
+                  "creationDate": "2017-03-01T15:15:28.400Z",
+                  "projectValue": "0.00",
+                  "projectType": null,
+                  "projectDescription": "Create a Sandbox for testing using the OG&C Template.  BECHTEL-NPR-000033 for Rob DeCarlo",
+                  "disconnectionStatus": "NONE",
+                  "hidden": false,
+                  "active": true,
+                  "mdmRequired": null,
+                  "grantedMobileAppAccess": null
+                }
+              ],
+              "totalResultsCount": 2,
+              "totalResultsOnCurrentPage": null,
+              "totalNumberOfPages": null,
+              "currentPageNumber": null,
+              "singlePageSize": null
+            }
+
+## Project by ID [/projects/{projectid}]
+
+### Get Project [GET]
+
+Returns the project associated with the provided Id
+
++ Parameters
+    + projectid: 1207962572 (number) - The project Id
+
++ Request
+
+    + Headers
+    
+            Accept: application/json (string) - advertises which content types the client is able to understand.
+
++ Response 200 (application/json)
+
+    + Headers
+    
+            Cache-Control: no-cache
+            Date: Fri, 09 Jun 2017 20:17:34 GMT
+            Expires: Wed, 31 Dec 1969 19:00:00 EST
+            Pragma: No-cache
+            Proxy-Connection: Keep-Alive
+            Server: Apache-Coyote/1.1
+            Transfer-Encoding: chunked
+            Via: 1.1 10.44.105.5 (McAfee Web Gateway 7.6.2.10.0.23236)
+            
+    + Body
+
+            {
+              "projectID": 1207962572,
+              "ownerOrganizationID": 1207969874,
+              "projectShortName": "EIS-INFRA-SB",
+              "projectName": "EIS Infrastructure Sandbox",
+              "deliveryAddressLine": "12011 Sunset Hills Road",
+              "deliveryCity": "Reston",
+              "deliveryState": "Virginia",
+              "deliveryCountry": "United States",
+              "deliveryPostcode": "20190",
+              "postalAddressLine": "12011 Sunset Hills Road",
+              "postalCity": "Reston",
+              "postalState": "Virginia",
+              "postalCountry": "United States",
+              "postalPostcode": "20190",
+              "projectAddressLine": "12011 Sunset Hills Road",
+              "projectCity": "Reston",
+              "projectState": "Virginia",
+              "projectCountry": "United States",
+              "projectPostcode": "20190",
+              "phoneNumber": "15713926300",
+              "faxNumber": "1",
+              "responsibilities": [],
+              "logoPath": null,
+              "startDate": "2017-03-01T05:00:00.000Z",
+              "stopDate": "2018-03-01T05:00:00.000Z",
+              "creationDate": "2017-03-01T17:04:28.870Z",
+              "projectValue": "0.00",
+              "projectType": "Combined Cycle",
+              "projectDescription": "Create a sandbox for testing using the Infrastructure Template.  Custodian Rob DeCarlo Bechtel.",
+              "disconnectionStatus": "NONE",
+              "hidden": false,
+              "active": true,
+              "mdmRequired": null,
+              "grantedMobileAppAccess": null
+            }
